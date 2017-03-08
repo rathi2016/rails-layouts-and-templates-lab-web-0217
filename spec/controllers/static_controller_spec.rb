@@ -9,7 +9,7 @@ RSpec.describe StaticController, type: :controller do
       visit :home
       expect(response).to render_template("home")
       expect(response).to render_template("layouts/application")
-
+      # binding.pry
       expect(page.find("h1").text).to eq("Flatiron Widgets Store")
       expect(page.find("h2").text).to eq("Welcome to Flatiron Widgets")
     end
